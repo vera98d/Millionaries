@@ -1,0 +1,382 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-image: linear-gradient(45deg, #0b2d6a, #37176c, #710475);
+    background-size: 150%;
+    animation: bg-animation 12s infinite alternate;
+    font-family: 'Kumbh Sans', sans-serif;
+    color: white;
+}
+
+@keyframes bg-animation {
+    0% {
+        background-position: left;
+    }
+
+    100% {
+        background-position: right;
+    }
+}
+
+.container {
+    min-height: 100vh;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+
+#start img {
+    width: 20vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition-duration: .5s;
+    transform: translate(-50%, -70%);
+}
+
+#start p {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-size: 30px;
+    color: white;
+    text-align: center;
+}
+
+#start #start-btn {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+
+
+/* panel pytań */
+#game {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    transition: 1s;
+}
+
+#game img {
+    width: 13vw;
+    position: absolute;
+    top: 25%;
+    left: 40%;
+    transition-duration: .5s;
+    transform: translate(-50%, -70%);
+}
+
+#question-container {
+    position: fixed;
+    bottom: 0%;
+    left: 0%;
+    width: 80%;
+    line-height: 150%;
+    min-height: 50vh;
+}
+
+#question {
+    font-size: 22px;
+    color: white;
+    margin: 3vh 3vw;
+    text-align: center;
+}
+
+/* przyciski odpowiedzi */
+#answers-buttons {
+    /* background-color: #000; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.answ-btn {
+    display: flex;
+    flex-basis: 30vw;
+    height: 5vw;
+    margin: 3vh 3vw;
+    text-align: left;
+    align-items: center;
+    padding: 3% 1%;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'verdana', sans-serif;
+    letter-spacing: 1px;
+    color: #fff;
+    border: solid 1px #fff;
+    border-radius: 3px;
+    transition: .4s;
+    cursor: pointer;
+    line-height: 150%;
+}
+
+.answ-btn:hover {
+    background-color: rgba(32, 11, 126, 60%);
+    color: white;
+}
+
+/* przycisk next */
+#next-btn,
+#resign-btn {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+
+/* panel postępu */
+#progress-status {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: flex;
+    height: 100vh;
+    width: 20%;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(11, 45, 106, 60%);
+
+}
+
+.win {
+    padding: 0 0 0 30%;
+    transition: .5s;
+}
+
+.win.current-win {
+    background-color: rgba(216, 180, 79, 80%);
+    color: #0b2d6a;
+}
+
+#progress-status .win:nth-last-child(4)>p,
+#progress-status .win:nth-last-child(4)>p>span,
+#progress-status .win:nth-last-child(8)>p,
+#progress-status .win:nth-last-child(8)>p>span,
+#progress-status .win:nth-last-child(12)>p,
+#progress-status .win:nth-last-child(12)>p>span {
+    color: #d8b44f;
+}
+
+.win p,
+.win span {
+    color: white;
+    display: inline-block;
+}
+
+
+#progress-status span {
+    margin-right: 10%;
+}
+
+/* panel końcowy */
+#end {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    top: 0%;
+    left: 0%;
+    transition: 1s;
+}
+
+#end img {
+    width: 20vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition-duration: .5s;
+    transform: translate(-50%, -70%);
+
+
+}
+
+#end-message {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    text-align: center;
+    line-height: 150%;
+}
+
+#try-again-btn {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+/* przyciski nawigacyjne */
+
+.btn {
+    display: inline-block;
+    padding: 0.6em 1em;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'verdana', sans-serif;
+    letter-spacing: 1px;
+    color: #fff;
+    border: solid 1px #fff;
+    border-radius: 3px;
+    transition: 1s;
+    cursor: pointer;
+    position: relative;
+}
+
+.btn:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0;
+    left: 0;
+    top: 0;
+    background-color: rgba(255, 255, 255, 100%);
+    transition: .3s;
+    z-index: -1;
+}
+
+.btn:hover:before {
+    width: 100%;
+}
+
+.btn:hover {
+    color: #37176c
+}
+
+
+
+/* klasy nadawane przy akcji  */
+.answ-btn.correct {
+    background-color: rgba(14, 77, 14, 80%);
+}
+
+.answ-btn.wrong {
+    background-color: rgba(85, 12, 12, 80%);
+}
+
+.hide {
+    display: none;
+}
+
+
+
+/* .moneycontainer {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.moneycontainer img {
+    position: absolute;
+    width: 5%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .5s;
+    animation: money-drop 2s infinite linear reverse;
+    overflow: hidden;
+}
+
+
+
+.moneycontainer img:nth-child(1) {
+
+    left: 10%;
+    top: -10%;
+}
+
+.moneycontainer img:nth-child(2) {
+
+    left: 35%;
+    top: -10%;
+}
+
+.moneycontainer img:nth-child(3) {
+
+    left: 60%;
+    top: -10%;
+}
+
+.moneycontainer img:nth-child(4) {
+
+    left: 95%;
+    top: -10%;
+}
+
+.moneycontainer img:nth-child(5) {
+
+    left: 110%;
+    top: 50%;
+}
+
+.moneycontainer img:nth-child(6) {
+
+    left: 110%;
+    top: 90%;
+}
+
+.moneycontainer img:nth-child(7) {
+
+    left: 80%;
+    top: -10%;
+}
+
+.moneycontainer img:nth-child(8) {
+
+    left: 10%;
+    top: 110%;
+}
+
+.moneycontainer img:nth-child(9) {
+
+    left: 35%;
+    top: 110%;
+}
+
+.moneycontainer img:nth-child(10) {
+
+    left: 60%;
+    top: 110%;
+}
+
+.moneycontainer img:nth-child(11) {
+
+    left: 110%;
+    top: 90%;
+}
+
+.moneycontainer img:nth-child(12) {
+
+    left: 110%;
+    top: 90%;
+}
+
+.moneycontainer img:nth-child(13) {
+
+    left: -10%;
+    top: 50%;
+}
+
+@keyframes money-drop {
+    100% {
+        top: 50%;
+        left: 50%;
+        transform: scale(1);
+    }
+} */
