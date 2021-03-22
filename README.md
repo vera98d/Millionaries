@@ -7,4 +7,4 @@ Niniejszy projekt to implementacja popularnej gry Milionerzy w wercji na kompute
 * Javascript
 
 # Licencja
-Ten projekt jest objęty licencją MIT - szczegółowe informacje można znaleźć w pliku [LICENSE.md](github.com/vera98d/milionerzy/LICENSE.md).
+Ten projekt jest objęty licencją MIT - szczegółowe informacje można znaleźć w pliku [LICENSE.md](https://github.com/vera98d/milionerzy/blob/main/LICENSE).
