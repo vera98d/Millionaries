@@ -91,40 +91,52 @@ body {
     color: white;
     margin: 3vh 3vw;
     text-align: center;
+    line-height: 150%;
 }
 
 /* przyciski odpowiedzi */
 #answers-buttons {
-    /* background-color: #000; */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
 }
 
+.answ-btn-letter {
+    color: #d8b44f;
+}
+
 .answ-btn {
     display: flex;
     flex-basis: 30vw;
-    height: 5vw;
+    min-height: 5vw;
     margin: 3vh 3vw;
     text-align: left;
     align-items: center;
-    padding: 3% 1%;
+    padding: 1em .8em;
     text-decoration: none;
     font-size: 16px;
     font-family: 'verdana', sans-serif;
     letter-spacing: 1px;
     color: #fff;
-    border: solid 1px #fff;
-    border-radius: 3px;
+    border: solid 2px #fff;
+    border-radius: 2.2em;
     transition: .4s;
     cursor: pointer;
     line-height: 150%;
+
+    -webkit-box-shadow: 0px 0px 24px -10px rgba(255, 255, 255, 1);
+    -moz-box-shadow: 0px 0px 24px -10px rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 24px -10px rgba(255, 255, 255, 1);
 }
 
 .answ-btn:hover {
     background-color: rgba(32, 11, 126, 60%);
     color: white;
+
+    -webkit-box-shadow: 0px 0px 27px -6px rgba(255, 255, 255, 1);
+    -moz-box-shadow: 0px 0px 27px -6px rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 27px -6px rgba(255, 255, 255, 1);
 }
 
 /* przycisk next */
@@ -152,8 +164,11 @@ body {
 }
 
 .win {
-    padding: 0 0 0 30%;
+    padding: 0 3.5em 0 3.5em;
     transition: .5s;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .win.current-win {
@@ -162,23 +177,25 @@ body {
 }
 
 #progress-status .win:nth-last-child(4)>p,
-#progress-status .win:nth-last-child(4)>p>span,
+#progress-status .win:nth-last-child(4)>p>.num,
 #progress-status .win:nth-last-child(8)>p,
-#progress-status .win:nth-last-child(8)>p>span,
+#progress-status .win:nth-last-child(8)>p>.num,
 #progress-status .win:nth-last-child(12)>p,
-#progress-status .win:nth-last-child(12)>p>span {
+#progress-status .win:nth-last-child(12)>p>.num {
     color: #d8b44f;
 }
 
 .win p,
-.win span {
+.win.num {
     color: white;
-    display: inline-block;
+    /* display: inline-block; */
 }
 
 
-#progress-status span {
+#progress-status .num {
     margin-right: 10%;
+    display: block;
+    height: 100%;
 }
 
 /* panel końcowy */
@@ -198,8 +215,6 @@ body {
     left: 50%;
     transition-duration: .5s;
     transform: translate(-50%, -70%);
-
-
 }
 
 #end-message {
@@ -232,10 +247,13 @@ body {
     letter-spacing: 1px;
     color: #fff;
     border: solid 1px #fff;
-    border-radius: 3px;
+    border-radius: 2.2em;
     transition: 1s;
     cursor: pointer;
     position: relative;
+    -webkit-box-shadow: 0px 0px 24px -10px rgba(255, 255, 255, 1);
+    -moz-box-shadow: 0px 0px 24px -10px rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 24px -10px rgba(255, 255, 255, 1);
 }
 
 .btn:before {
@@ -248,6 +266,7 @@ body {
     background-color: rgba(255, 255, 255, 100%);
     transition: .3s;
     z-index: -1;
+    border-radius: 2.2em;
 }
 
 .btn:hover:before {
@@ -255,7 +274,8 @@ body {
 }
 
 .btn:hover {
-    color: #37176c
+    color: #37176c;
+    border: solid 0px #fff;
 }
 
 
