@@ -1,4 +1,4 @@
-# Gra Milionerzy
+# Millionaires game
 This project is an implementation of the popular game Millionaires for browser. It consists in answering the questions displayed on the screen by clicking one of the four available stories. The project was made for educational purposes.
 
 Live demo: [Millionaires](https://vera98d.github.io/Millionaries/)
