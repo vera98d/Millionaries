@@ -1,12 +1,13 @@
 # Gra Milionerzy
-Niniejszy projekt to implementacja popularnej gry Milionerzy w wersji na komputer. Polega ona na udzielaniu odpowiedzi na wyświetlane na ekranie pytania popzez kliknięcie jednej z czterech dostępnych opowiedzi. Projekt był wykonany w celach edukacyjnych.
+This project is an implementation of the popular game Millionaires for browser. It consists in answering the questions displayed on the screen by clicking one of the four available stories. The project was made for educational purposes.
 
-Live demo: https://vera98d.github.io/milionerzy/
+Live demo: [Millionaires](https://vera98d.github.io/Millionaries/)
 
 # Technologie:
 * HTML
 * CSS 
 * Javascript
+* [opentdb](https://opentdb.com/)
 
-# Licencja
-Ten projekt jest objęty licencją MIT - szczegółowe informacje można znaleźć w pliku [LICENSE.md](https://github.com/vera98d/milionerzy/blob/main/LICENSE).
+# License
+This project is under the MIT License - see the file [LICENSE.md](https://github.com/vera98d/milionerzy/blob/main/LICENSE) for details.
